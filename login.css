@@ -1,0 +1,31 @@
+body {
+  background-color : #935DE9;
+  background:url("maxresdefault.jpg");
+  background-size:cover;
+}
+
+.login {
+  background-color : #efefef;
+  padding : 0.5rem;
+  border-radius : 13px;
+}
+
+.fa {
+  font-size : 21px;
+}
+
+.btn-blue:hover {
+  background-color : #935DE9 !important;
+  color : #efefef;
+}
+
+.btn-blue {
+  background-color : #efefef !important;
+  color : #834DD9;
+}
+
+.signup {
+  background-color : #efefef;
+  padding : 0.5rem;
+  border-radius : 13px;
+}
