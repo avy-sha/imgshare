@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 if( isset($_SESSION["check"])&&$_SESSION["check"]==true){
   echo("boo");
-  header("location: /Project/home.php");
+  header("location: /project/server/home.php");
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_POST["btnSubmit"])){
@@ -62,11 +62,11 @@ if($active==25){
     if($first==25){
   $_SESSION["username"] = $email;
   $_SESSION["check"]= true;
-    header("Refresh:0;URL=/Project/home.php");}
+    header("Refresh:0;URL=/project/server/home.php");}
     else if($first==24){
       $_SESSION["username"] = $email;
       $_SESSION["check"]= false;
-    header("Refresh:0;URL=/Project/first.php");}
+    header("Refresh:0;URL=/project/server/first.php");}
   }
     else
     $Err="account not verified!!";
@@ -126,7 +126,7 @@ else {
   }
   if($mainErr=="" &&$npassErr=="" &&$nemailErr=="" && $rpassErr=="")
   {$hash = md5( rand(0,1000) );
-    require ("/PHPMailer/mailtest.php");
+    require ("../PHPMailer/mailtest.php");
     if($rpassErr=='Verification mail has been sent'){
       $sql="INSERT INTO login_table  VALUES ('$nemail', '$npassword', '24','$hash','24')";
       $result = $conn->query($sql);
@@ -144,9 +144,9 @@ function test_input($data) {
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="loginsignup.js"></script>
+  <script type="text/javascript" src="../assets/js/loginsignup.js"></script>
 
 </head>
 <body>

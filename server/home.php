@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION["username"]));
 else {
-  header("location: /Project/a.php");
+  header("location: /project/server/a.php");
 }
 $str=$_SERVER["PHP_SELF"];
 $upost="uploadpost.php";
@@ -38,7 +38,7 @@ $dbname = "avy";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if(isset($_SESSION["check"]) && $_SESSION["check"]=true);
 else {
-  header("location: /Project/a.php");
+  header("location: /project/server/a.php");
 }
 $email=$_SESSION["username"];
 $sql="SELECT * from PROFILE where email='$email' ";
@@ -56,16 +56,16 @@ $_SESSION["max"] = $rowvalue["MAX(id)"];}
 <head>
 	<title>MelloMANIAC</title>
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="../assets/css/animate.min.css" rel="stylesheet"/>
 
-    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
-    <link href="assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -75,14 +75,14 @@ $_SESSION["max"] = $rowvalue["MAX(id)"];}
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="/Project/home.php" class="simple-text">
+                <a href="/project/server/home.php" class="simple-text">
                     MelloMANIAC
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="/Project/home.php">
+                    <a href="/project/server/home.php">
                         <i class=""></i>
                         <p>Home</p>
                     </a>
@@ -197,7 +197,7 @@ $_SESSION["max"] = $rowvalue["MAX(id)"];}
            echo'<tr>
 						<td>
               <div>
-              <b><a href="http://localhost/Project/searchprofile.php?username='.$curremail.'"><p><h2>'.$chow["fname"].' '.$chow["lname"].'</h2></p></a><b>
+              <b><a href="http://localhost/project/server/searchprofile.php?username='.$curremail.'"><p><h2>'.$chow["fname"].' '.$chow["lname"].'</h2></p></a><b>
               <p>'.$pow["status"].'</p>
               <div class="row">
                 <div class="col-md-offset-1">
@@ -271,24 +271,24 @@ $_SESSION["max"] = $rowvalue["MAX(id)"];}
 </body>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+	<script src="../assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+	<script src="../assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+    <script src="../assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	<script src="../assets/js/light-bootstrap-dashboard.js"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
+	<script src="../assets/js/demo.js"></script>
 </html>

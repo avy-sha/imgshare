@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION["check"])&&$_SESSION["check"]=true);
 else {
-  header("location: /Project/a.php");
+  header("location: /project/server/a.php");
 }
 $servername = "localhost";
 $username = "root";
@@ -12,7 +12,7 @@ $dbname = "avy";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if(isset($_SESSION["check"])&&$_SESSION["check"]=true);
 else {
-  header("location: /Project/a.php");
+  header("location: /project/server/a.php");
 }
 $email=$_SESSION["username"];
 $sql="SELECT * from PROFILE where email='$email' ";
@@ -24,23 +24,23 @@ $row = $result->fetch_assoc();
 	<title>melloMANIAC</title>
 
     <!-- Bootstrap core CSS     -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Animation library for notifications   -->
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="../assets/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
-    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
 
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -57,33 +57,33 @@ $row = $result->fetch_assoc();
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="/Project/home.php" class="simple-text">
+                <a href="/project/server/home.php" class="simple-text">
                     melloMANIAC
 									                </a>
             </div>
 
             <ul class="nav">
                 <li>
-                    <a href="/Project/home.php">
+                    <a href="/project/server/home.php">
                         <i ></i>
                         <p>Home</p>
                     </a>
                 </li>
                 <li >
-                    <a href="profile.php">
+                    <a href="/project/server/profile.php">
                         <i></i>
                         <p>Profile</p>
                     </a>
                 </li>
 								<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <li>
-                    <a href="account.php">
+                    <a href="/project/server/account.php">
                         <i class=""></i>
                         <p>Account</p>
                     </a>
                 </li>
                 <li>
-                    <a href="lg.php">
+                    <a href="/project/server/lg.php">
                         <i class=""></i>
                         <p>Logout</p>
                     </a>
@@ -107,12 +107,12 @@ $row = $result->fetch_assoc();
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="account.php">
+                           <a href="/project/server/account.php">
                                Account
                             </a>
                         </li>
                         <li>
-                            <a href="lg.php">
+                            <a href="/project/server/lg.php">
                                 Log out
                             </a>
                         </li>
@@ -206,24 +206,24 @@ $row = $result->fetch_assoc();
 </body>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+	<script src="../assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+	<script src="../assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+    <script src="../assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	<script src="../assets/js/light-bootstrap-dashboard.js"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
+	<script src="../assets/js/demo.js"></script>
 </html>
