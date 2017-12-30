@@ -45,13 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$newImage = $manipulator->resample(900,400,false);
 				// saving file to uploads folder
 				$manipulator->save('../uploads/' .'cover'.$tobename.'.'.$ext);
-				//move_uploaded_file($tmpName,$Path);
+				//move_uploaded_file($tmpName,$targetPath);
 			//	move_uploaded_file($tmpName,$targetPath);
 				$nextname='cover'.$tobename.'.'.$ext;
 				$conn->query("UPDATE profile SET cover='$nextname' WHERE email='$email'");
 				$next=$tobename+1;
 				$conn->query("UPDATE servervariables SET value='$next' WHERE variable='cover'");
-			  header( 'Location: project/server/profile.php' ) ;
+			  header( 'Location: profile.php' ) ;
 				exit;
 			}
 			break;
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			break;
 		case UPLOAD_ERR_NO_FILE:{
 			$response = 'No file was uploaded.';
-			header( 'Location: project/server/profile.php' ) ;
+			header( 'Location: profile.php' ) ;
 		 }
 			break;
 		case UPLOAD_ERR_NO_TMP_DIR:

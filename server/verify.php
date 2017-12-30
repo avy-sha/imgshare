@@ -21,6 +21,6 @@ if(isset($_GET['ck']) && !empty($_GET['ck']) AND isset($_GET['hash']) && !empty(
         echo 'Your account has been activated . redirecting to home page';
         $_SESSION["username"] = $email;
         $_SESSION["check"]= false;
-      header("Refresh:3; url=/Project/first.php");}
+      header("Refresh:3; url=/Project/server/first.php");}
       }
 ?>

@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			//upload file
 			if ($valid) {
 				$ext = pathinfo($name, PATHINFO_EXTENSION);
-				$targetPath =  dirname( __FILE__ ) . DIRECTORY_SEPARATOR. 'posts' . DIRECTORY_SEPARATOR. 'post'.$tobename.'.'.$ext;
+				$targetPath =  dirname( __FILE__ ) . DIRECTORY_SEPARATOR. '../posts' . DIRECTORY_SEPARATOR. 'post'.$tobename.'.'.$ext;
 			//	move_uploaded_file($tmpName,$targetPath);
-				$nextname='posts/post'.$tobename.'.'.$ext;
+				$nextname='../posts/post'.$tobename.'.'.$ext;
 				move_uploaded_file($tmpName,$targetPath);
 //insert wali query
 				$conn->query("INSERT INTO post VALUES ('$id','$email','$nextname','$status')");

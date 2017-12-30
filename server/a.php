@@ -1,5 +1,4 @@
 <!--DOCTYPE html-->
-
 <?php
 session_start();
 $servername = "localhost";
@@ -26,7 +25,6 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 if( isset($_SESSION["check"])&&$_SESSION["check"]==true){
-  echo("boo");
   header("location: /project/server/home.php");
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

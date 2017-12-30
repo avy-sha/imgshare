@@ -8,18 +8,18 @@ $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp-mail.outlook.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'OUTLOOK EMAIL';                 // SMTP username
-$mail->Password = 'OUTLOOK PASSWORD';                           // SMTP password
+$mail->Username = 'Enter the outlook id';                 // SMTP username
+$mail->Password = 'Enter the outlook password';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('OUTLOOK EMAIL');
+$mail->setFrom('Enter the outlook id');
 $mail->addAddress($nemail);     // Add a recipient
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Verification Email';
-$mail->Body    = 'Verify to activate your account<br>click on this link to activate your account :  http://localhost/Project/verify.php?ck='.$nemail.'&hash='.$hash;
+$mail->Body    = 'Verify to activate your account<br>click on this link to activate your account :  http://localhost/Project/server/verify.php?ck='.$nemail.'&hash='.$hash;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

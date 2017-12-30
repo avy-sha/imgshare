@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // resizing to 200x200
         $newImage = $manipulator->resample(200, 200,false);
         // saving file to uploads folder
-        $manipulator->save('uploads/' .'pp'.$tobename.'.'.$ext);
+        $manipulator->save('../uploads/' .'pp'.$tobename.'.'.$ext);
 				//move_uploaded_file($tmpName,$targetPath);
 				$nextname='pp'.$tobename.'.'.$ext;
 				$conn->query("UPDATE profile SET pp='$nextname' WHERE email='$email'");

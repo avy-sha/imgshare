@@ -34,7 +34,7 @@ $username = "root";
 $password = "";
 $dbname = "avy";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$folder = "uploads";
+$folder = "../uploads";
 $email=$_SESSION["username"];
 $result = $conn->query("SELECT * FROM profile WHERE email='$email'") ;
 $row = $result->fetch_assoc();
